@@ -10,7 +10,7 @@ $bot = PinterestBot::create();
 
 $bot->auth->login( getenv('USER'),  getenv('PASS'));
 
-echo(getenv('USER'));
+echo(getenv('PASS'));
 //$board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
 //$pins = $bot->pins->search('cats')->take(1)->toArray();
