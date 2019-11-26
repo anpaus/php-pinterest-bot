@@ -13,7 +13,7 @@ $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 echo(getenv('USERNAME'));
 $board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
-$pins = $bot->pins->search('video games')->take(1)->toArray();
+$pins = $bot->pins->search('videogames')->take(1)->toArray();
 
 foreach ($pins as $pin) {
     // repin to our board
