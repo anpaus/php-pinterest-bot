@@ -14,7 +14,7 @@ $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 $board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
 //$pins = $bot->pins->search('videogames')->take(1)->toArray();
-$pins = $bot->pins->feed(3)
+$pins = $bot->pins->feed(3);
     
 foreach ($pins as $pin) {
     // repin to our board
