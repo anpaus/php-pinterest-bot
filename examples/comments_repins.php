@@ -8,9 +8,9 @@ $comments = ['Nice!', 'Cool!', 'Very beautiful!', 'Amazing!'];
 
 $bot = PinterestBot::create();
 
-$bot->auth->login( getenv('USER'),  getenv('PASS'));
+$bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 
-echo(getenv('PASS'));
+echo(getenv('USERNAME'));
 //$board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
 //$pins = $bot->pins->search('cats')->take(1)->toArray();
