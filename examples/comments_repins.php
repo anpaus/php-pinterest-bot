@@ -14,7 +14,7 @@ $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 $board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
 //$pins = $bot->pins->search('videogames')->take(1)->toArray();
-$pins = $bot->pins->feed(3);
+$pins = $bot->pins->feed(5);
     
 foreach ($pins as $pin) {
     // repin to our board
@@ -22,5 +22,5 @@ foreach ($pins as $pin) {
     // write a comment
     $comment = $comments[array_rand($comments)];
     //$bot->comments->create($pin['id'], $comment);
-    sleep(1);
+    sleep(5);
 }
