@@ -7,11 +7,11 @@ use seregazhuk\PinterestBot\Factories\PinterestBot;
 $comments = ['Nice!', 'Cool!', 'Very beautiful!', 'Amazing!'];
 
 $bot = PinterestBot::create();
-$bot->auth->login('mypinterestlogin', 'mypinterestpassword');
+$bot->auth->login( getenv('USER'),  getenv('PASS'));
 
-$board = $bot->boards->info('my_username', 'Cats repins');
+$board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
-$pins = $bot->pins->search('cats')->toArray();
+$pins = $bot->pins->search('cats')->take(1)->toArray();
 
 foreach ($pins as $pin) {
     // repin to our board
@@ -19,4 +19,5 @@ foreach ($pins as $pin) {
     // write a comment
     $comment = $comments[array_rand($comments)];
     $bot->comments->create($pin['id'], $comment);
+    sleep(1);
 }
