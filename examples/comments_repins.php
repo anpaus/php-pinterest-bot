@@ -10,11 +10,12 @@ $bot = PinterestBot::create();
 
 $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 
-echo(getenv('USERNAME'));
+//echo(getenv('USERNAME'));
 $board = $bot->boards->info('pawelterlecki', 'ANPAUS');
 
-$pins = $bot->pins->search('videogames')->take(1)->toArray();
-
+//$pins = $bot->pins->search('videogames')->take(1)->toArray();
+$bot->pins->feed(3)
+    
 foreach ($pins as $pin) {
     // repin to our board
     $bot->pins->repin($pin['id'], $board['id']);
