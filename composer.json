@@ -28,8 +28,6 @@
         "ext-curl": "*",
         "ext-fileinfo": "*",
     },
-    "require-dev": {
-    },
     "authors": [
         {
             "name": "Sergey Zhuk",
