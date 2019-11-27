@@ -13,7 +13,7 @@ $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 //echo(getenv('USERNAME'));
 $board = $bot->boards->info('pawelterlecki', 'Finance Tips');
 
-$pins = $bot->topics->pins('money-management')->take(1)->toArray();
+$pins = $bot->topics->pins('money-management')->take(5)->toArray();
 //$pins = $bot->pins->feed(5);
     
 foreach ($pins as $pin) {
@@ -31,7 +31,7 @@ foreach ($pins as $pin) {
     $info = $bot->boards->info($pin['pinner']['username'], $pin['board']['name']);
     $bot->boards->follow($info['id']);
     $test = $bot->boards->followers($info['id'])->take(1)->toArray();
-    print_r($test);
+    //print_r($test);
     //$bot->comments->create($pin['id'], $comment);
-    sleep(1);
+    sleep(3);
 }
