@@ -13,7 +13,7 @@ $bot->auth->login( getenv('USERNAME'),  getenv('PASS'));
 //echo(getenv('USERNAME'));
 $board = $bot->boards->info('pawelterlecki', 'Finance Tips');
 
-$pins = $bot->pins->search('finance tips')->take(1)->toArray();
+$pins = $bot->topics->pins('money-management')->take(1)->toArray();
 //$pins = $bot->pins->feed(5);
     
 foreach ($pins as $pin) {
