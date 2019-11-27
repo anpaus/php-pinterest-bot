@@ -30,6 +30,8 @@ foreach ($pins as $pin) {
     $bot->pinners->follow($pin['pinner']['username']);
     $info = $bot->boards->info($pin['pinner']['username'], $pin['board']['name']);
     $bot->boards->follow($info['id']);
+    $test = $bot->boards->followers($info['id'])->take(1)->toArray();
+    print_r($test);
     //$bot->comments->create($pin['id'], $comment);
-    sleep(5);
+    sleep(1);
 }
