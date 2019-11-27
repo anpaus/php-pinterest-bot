@@ -21,7 +21,7 @@ foreach ($pins as $pin) {
     $bot->pins->repin($pin['id'], $board['id']);
     // write a comment
     $comment = $comments[array_rand($comments)];
-    echo($pin);
+    print_r($pin);
     //$bot->comments->create($pin['id'], $comment);
     sleep(5);
 }
