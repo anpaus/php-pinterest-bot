@@ -21,14 +21,14 @@ foreach ($pins as $pin) {
     $bot->pins->repin($pin['id'], $board['id']);
     // write a comment
     //$comment = $comments[array_rand($comments)];
-    print_r($pin['pinner']);
-    print_r($pin['board']);
+    //print_r($pin['pinner']);
+    //print_r($pin['board']);
     /*foreach ($pin as $p) {
         print_r($p);
         echo("<br>");
     }*/
-    $bot->pinners->follow($pin['username']);
-    $info = $bot->boards->info($pin['username'], $pin['board']['name']);
+    $bot->pinners->follow($pin['pinner']['username']);
+    $info = $bot->boards->info($pin['pinner']['username'], $pin['board']['name']);
     print_r($info);
     //$bot->comments->create($pin['id'], $comment);
     sleep(5);
