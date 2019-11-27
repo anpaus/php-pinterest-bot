@@ -21,6 +21,7 @@ foreach ($pins as $pin) {
     $bot->pins->repin($pin['id'], $board['id']);
     // write a comment
     //$comment = $comments[array_rand($comments)];
+    print_r($pin);
     $bot->pinners->follow($pin['username']);
     $info = $bot->boards->info($pin['username'], $pin['board']['name']);
     print_r($info);
