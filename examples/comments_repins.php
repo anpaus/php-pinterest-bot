@@ -22,10 +22,11 @@ foreach ($pins as $pin) {
     // write a comment
     //$comment = $comments[array_rand($comments)];
     print_r($pin['pinner']);
-    foreach ($pin as $p) {
+    print_r($pin['board']);
+    /*foreach ($pin as $p) {
         print_r($p);
         echo("<br>");
-    }
+    }*/
     $bot->pinners->follow($pin['username']);
     $info = $bot->boards->info($pin['username'], $pin['board']['name']);
     print_r($info);
