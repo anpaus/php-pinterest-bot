@@ -29,7 +29,7 @@ foreach ($pins as $pin) {
     }*/
     $bot->pinners->follow($pin['pinner']['username']);
     $info = $bot->boards->info($pin['pinner']['username'], $pin['board']['name']);
-    print_r($info['id']);
+    $bot->boards->follow($info['id']);
     //$bot->comments->create($pin['id'], $comment);
     sleep(5);
 }
