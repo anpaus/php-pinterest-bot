@@ -33,8 +33,10 @@ foreach ($pins as $pin) {
     $test = $bot->boards->followers($info['id'])->take(1)->toArray();
     //print_r($test);
     //$bot->comments->create($pin['id'], $comment);
-    sleep(1);
+    sleep(3);
 }
+
+set_time_limit(30);
 
 $board = $bot->boards->info('pawelterlecki', 'Money Saving');
 
@@ -58,6 +60,6 @@ foreach ($pins as $pin) {
     $test = $bot->boards->followers($info['id'])->take(1)->toArray();
     //print_r($test);
     //$bot->comments->create($pin['id'], $comment);
-    sleep(1);
+    sleep(3);
 }
 
