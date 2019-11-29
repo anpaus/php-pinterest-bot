@@ -113,5 +113,6 @@ foreach ($pins as $pin) {
     sleep(1);
 }
 
+header("Location: comments_repins2.php");
 
 
