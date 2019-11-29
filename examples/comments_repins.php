@@ -2,6 +2,19 @@
 
 ini_set('max_execution_time', '60');
 
+if(!ini_get('safe_mode')){
+
+    echo "safe mode off";
+    set_time_limit(180);// seconds
+
+    //phpinfo();// see 'max_execution_time'
+}
+else
+{
+    echo "safe mode on";
+    exit();
+}
+
 require __DIR__ . '/../vendor/autoload.php';
 
 use seregazhuk\PinterestBot\Factories\PinterestBot;
