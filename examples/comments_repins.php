@@ -7,14 +7,14 @@ if(!ini_get('safe_mode')){
     echo "safe mode off";
     set_time_limit(180);// seconds
     
-    exit();
+    //exit();
 
     //phpinfo();// see 'max_execution_time'
 }
 else
 {
     echo "safe mode on";
-    exit();
+    //exit();
 }
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -53,7 +53,7 @@ foreach ($pins as $pin) {
     sleep(1);
 }
 
-//set_time_limit(30);
+set_time_limit(30);
 
 $board = $bot->boards->info('pawelterlecki', 'Money Saving');
 
@@ -80,6 +80,8 @@ foreach ($pins as $pin) {
     sleep(1);
 }
 
+set_time_limit(30);
+
 $board = $bot->boards->info('pawelterlecki', 'Moms Blogs');
 
 $pins = $bot->topics->pins('mom blogs')->take(5)->toArray();
@@ -105,6 +107,8 @@ foreach ($pins as $pin) {
     sleep(1);
 }
 
+set_time_limit(30);
+
 $board = $bot->boards->info('pawelterlecki', 'Food Recipes');
 $pins = $bot->topics->pins('food recipes')->take(5)->toArray();
 //$pins = $bot->pins->feed(5);
@@ -128,6 +132,9 @@ foreach ($pins as $pin) {
     //$bot->comments->create($pin['id'], $comment);
     sleep(1);
 }
+
+set_time_limit(30);
+
 $board = $bot->boards->info('pawelterlecki', 'Twitch Streamer');
 $pins = $bot->topics->pins('twitch')->take(5)->toArray();
 //$pins = $bot->pins->feed(5);
