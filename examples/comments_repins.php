@@ -65,7 +65,7 @@ foreach ($pins as $pin) {
 
 $board = $bot->boards->info('pawelterlecki', 'Moms Blogs');
 
-$pins = $bot->topics->pins('moms blogs')->take(5)->toArray();
+$pins = $bot->topics->pins('mom blogs')->take(5)->toArray();
 //$pins = $bot->pins->feed(5);
     
 foreach ($pins as $pin) {
