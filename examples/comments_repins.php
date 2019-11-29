@@ -6,6 +6,8 @@ if(!ini_get('safe_mode')){
 
     echo "safe mode off";
     set_time_limit(180);// seconds
+    
+    exit();
 
     //phpinfo();// see 'max_execution_time'
 }
