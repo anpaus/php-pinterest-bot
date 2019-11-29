@@ -90,4 +90,6 @@ foreach ($pins as $pin) {
 
 header("Location: comments_repins2.php");
 
+die();
+
 
