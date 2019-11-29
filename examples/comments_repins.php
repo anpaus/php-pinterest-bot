@@ -1,5 +1,7 @@
 <?php
 
+phpinfo();
+
 require __DIR__ . '/../vendor/autoload.php';
 
 use seregazhuk\PinterestBot\Factories\PinterestBot;
