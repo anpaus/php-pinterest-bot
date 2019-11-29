@@ -86,4 +86,3 @@ foreach ($pins as $pin) {
     sleep(1);
 }
 
-exec("php comments_repins2.php > /dev/null &");
